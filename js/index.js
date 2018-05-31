@@ -1,5 +1,5 @@
-var COUNTY_URL = 'https://raw.githubusercontent.com/ronnywang/twgeojson/master/twcounty2010.json';
-var TOWN_URL = 'https://raw.githubusercontent.com/ronnywang/twgeojson/master/twtown2010.json';
+var COUNTY_URL = 'https://raw.githubusercontent.com/ronnywang/twgeojson/master/twcounty2010.3.json';
+var TOWN_URL = 'https://raw.githubusercontent.com/ronnywang/twgeojson/master/twtown2010.3.json';
 
 var map = L.map('map').setView([23.6, 121], 8);;
 var layer = L.geoJSON().addTo(map);
