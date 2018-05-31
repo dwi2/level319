@@ -1,0 +1,23 @@
+{
+  "name": "level319",
+  "version": "0.0.1",
+  "description": "A Taiwan version of 制県レベル",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "dev": "parcel -p 3000 index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwi2/level319.git"
+  },
+  "author": "dwi2",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/dwi2/level319/issues"
+  },
+  "homepage": "https://github.com/dwi2/level319#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.8.1"
+  }
+}
