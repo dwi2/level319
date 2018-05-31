@@ -1,31 +1,26 @@
 import { geoJsonURLs } from './constant';
+import { styles } from './styles';
 
-var styles = {
-    hover: {
-        weight: 6,
-        color: '#000',
-        opacity: 0
-    },
-    click: {
-        weight: 6,
-        color: '#000',
-        opacity: 0,
-        fillOpacity: 0.5
-    },
-    default: {
-        weight: 2
-    }
-}
+var currentLayerId;
 
 var eventHandlers = {
     click: (event) => {
+        if (currentLayerId !== undefined && currentLayerId !== event.target._leaflet_id) {
+            var lastLayer = geojson.getLayer(currentLayerId);
+            geojson.resetStyle(lastLayer);
+        }
+
         event.target.setStyle(styles.click);
+        currentLayerId = event.target._leaflet_id;
     },
     mouseover: (event) => {
         event.target.setStyle(styles.hover);
     },
     mouseout: (event) => {
-        geojson.resetStyle(event.target);
+        var id = event.target._leaflet_id;
+        if (id !== currentLayerId) {
+            geojson.resetStyle(event.target);
+        }
     }
 };
 
