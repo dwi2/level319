@@ -1,5 +1,4 @@
-var COUNTY_URL = 'https://raw.githubusercontent.com/ronnywang/twgeojson/master/twcounty2010.3.json';
-var TOWN_URL = 'https://raw.githubusercontent.com/ronnywang/twgeojson/master/twtown2010.3.json';
+import { geoJsonURLs } from './constant';
 
 var styles = {
     hover: {
@@ -41,7 +40,7 @@ var geojson = L.geoJSON(null, {
 }).addTo(map);
 
 // TODO: GeoJSON data is quite big, we need a loading indicator!
-fetch(COUNTY_URL).then((response) => {
+fetch(geoJsonURLs.county.small).then((response) => {
     if (!response.ok) {
         // TODO: display error screen
     }
